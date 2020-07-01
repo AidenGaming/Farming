@@ -68,12 +68,11 @@
 			<configuration name="folding" index="2"/>
 			<configuration name="motor" index="5"/>			
         </configurationSet>
-		<!-- DumpBed config Dumpbed100 -->
-		<configurationSet name="Day Cab Triple Axle Dumpbed">
-            <configuration name="wheel" index="1"/>
-			<!-- <configuration name="folding" index="2"/> -->
-            <configuration name="fillUnit" index="100"/> 
-			<configuration name="motor" index="5"/>			
+		<configurationSet name="Sleeper Hooklift">
+            <configuration name="wheel" index="6"/>
+			<configuration name="attacherJoint" index="2"/>
+			<configuration name="folding" index="2"/>
+			<configuration name="motor" index="6"/>			
         </configurationSet>
 		<configurationSet name="Sleeper Hooklift">
             <configuration name="wheel" index="6"/>
@@ -81,6 +80,10 @@
 			<configuration name="folding" index="2"/>
 			<configuration name="motor" index="6"/>			
         </configurationSet>
+	
+		
+		
+		
 		
 		
 		<configurationSet name="Day Cab Triple Axle (lowered)">
@@ -119,6 +122,18 @@
 			<configuration name="folding" index="2"/>
 			<configuration name="motor" index="12"/>			
         </configurationSet>
+			<configurationSet name="Day Cab dumptruck">
+            <configuration name="wheel" index="1"/>
+			<configuration name="fillUnit" index="100"/>
+			<configuration name="folding" index="1"/>
+			<configuration name="motor" index="1"/>
+			<configuration name="attacherJoint" index="0"/>
+        </configurationSet>	
+		
+		
+		
+		
+		
 
     </configurationSets>
 	<attacherJoints comboDuration="2">
@@ -390,6 +405,7 @@
 				<objectChange node="racks" translationActive="0 -0.387 1.133" translationInactive="0 -0.387 -0.099"/>
 				<objectChange node="chassi" translationActive="0 0 0.928"/>
 				<objectChange node="colHooklift" compoundChildActive="true" compoundChildInactive="false"/>
+				<objectChange node="dump_bed" visibilityActive="true" visibilityInactive="false"/>
 											
 				
             </wheelConfiguration>		
@@ -497,6 +513,56 @@
 				<objectChange node="rearAxles"  translationInactive="0 -0.299 -0.901" translationActive="0 -0.092 -0.901"/>		
 				
             </wheelConfiguration>						
+			
+			
+			<!-- Dumpbed/Truck wheel config -->
+			
+              <!-- <wheelConfiguration name="Day Cab dumptruck"  brand="NOKIAN"> -->
+                <!-- <wheels autoRotateBackSpeed="2.2" ackermannSteeringIndex="1" differentialIndex="1" foldingConfigurationIndex="3"> -->
+                    <!-- <wheel filename="wheels/wheels.xml" configId="single" isLeft="true" hasTireTracks="true" hasParticles="true"> -->
+                        <!-- <physics rotSpeed="1" restLoad="1.9" repr="axisFrontLeft" driveNode="wheelFrontLeft" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/> -->
+                    <!-- </wheel> -->
+                    <!-- <wheel filename="wheels/wheels.xml" configId="single" isLeft="false" hasTireTracks="true" hasParticles="true"> -->
+                        <!-- <physics rotSpeed="1" restLoad="1.9" repr="axisFrontRight" driveNode="wheelFrontRight" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/> -->
+                    <!-- </wheel>				 -->
+                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true"> -->
+                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
+						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
+                    <!-- </wheel> -->
+                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true"> -->
+                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
+						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
+                    <!-- </wheel> -->
+                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true"> -->
+                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
+						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
+                    <!-- </wheel> -->
+                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true"> -->
+                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
+						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
+                    <!-- </wheel> -->
+                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true"> -->
+                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
+						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
+                    <!-- </wheel> -->
+                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true"> -->
+                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
+						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
+                    <!-- </wheel> -->
+                <!-- </wheels>		 -->
+				<!-- <objectChange node="chassi" translationActive="0 0 -0.266"/> -->
+				<!-- <objectChange node="dump_bed" visibilityActive="true" visibilityInactive="false"/> -->
+											
+				
+            <!-- </wheelConfiguration>		 -->
+
+			
+			
+			
+			
+			
+			
+			
 			
 			
         </wheelConfigurations>
@@ -872,10 +938,13 @@
 				
 			</fillUnitConfiguration>
 	        </fillUnitConfigurations>
-		
-		<!-- Dumpbed -->
-		        <fillUnitConfigurations>
-            <fillUnitConfiguration name="Dumpbed" price="5000" >
+    </fillUnit>	
+	 <fillUnit>
+
+
+	<!-- Dumpbed -->
+	   <fillUnitConfigurations title="DumpBed">
+            <fillUnitConfiguration name="dump_bed" price="5000" >
                 <fillUnits>
                     <fillUnit capacity="880" unit="$l10n_unit_literShort" fillTypes="diesel" showOnHud="false" showInShop="false">
 					</fillUnit>
@@ -889,6 +958,14 @@
                     </fillUnit>					
                 </fillUnits>
             </fillUnitConfiguration> 
+			 <fillUnitConfiguration name="No dump" price="0">
+                <fillUnits>                    
+					<fillUnit capacity="880" unit="$l10n_unit_literShort" fillTypes="diesel" showOnHud="false" showInShop="false">
+					</fillUnit>
+					<fillUnit unit="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="air" capacity="4500"/>
+						
+                </fillUnits>
+            </fillUnitConfiguration>
         </fillUnitConfigurations>	
   </fillUnit>		
     <!-- <fillVolume> -->
@@ -1560,7 +1637,7 @@
 		<i3dMapping id="2ndAxle" node="0>4|6|3"/>
 		
 		<!-- Dumpbed -->
-		<i3dMapping id="dumpBed" node="0>8"/>
+		<i3dMapping id="dump_bed" node="0>8|8"/>
 		<i3dMapping id="dumpbedStatic" node="0>8|8|0|0|5"/>
 		<i3dMapping id="dumpbed_color" node="0>8|8|0|0|0"/>	
     </i3dMappings>
