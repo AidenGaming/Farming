@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <vehicle type="hookLiftTruckKW">
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
     <storeData>
@@ -24,6 +24,7 @@
         <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
         <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
     </storeData>
+
     <base>
         <typeDesc>$l10n_typeDesc_truck</typeDesc>
         <filename>kenworthC500.i3d</filename>
@@ -67,11 +68,11 @@
 			<configuration name="folding" index="2"/>
 			<configuration name="motor" index="5"/>			
         </configurationSet>
-		<!-- DumpBed config -->
+		<!-- DumpBed config Dumpbed100 -->
 		<configurationSet name="Day Cab Triple Axle Dumpbed">
             <configuration name="wheel" index="1"/>
-			<configuration name="folding" index="2"/>
-            <configuration name="fillUnit" index="6"/>
+			<!-- <configuration name="folding" index="2"/> -->
+            <configuration name="fillUnit" index="100"/> 
 			<configuration name="motor" index="5"/>			
         </configurationSet>
 		<configurationSet name="Sleeper Hooklift">
@@ -180,7 +181,7 @@
             <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="0>" />
         </sounds>
     </attacherJoints>	
-    <wheels>
+        <wheels>
         <wheelConfigurations>
 
             <wheelConfiguration name="Daycab triple Axle"  brand="NOKIAN">
@@ -439,252 +440,6 @@
 				<objectChange node="sleeperConfig" visibilityActive="true" visibilityInactive="false"/>
 				<objectChange node="chassi" translationActive="0 0 -0.266"/>
 				<objectChange node="colHooklift" compoundChildActive="true" compoundChildInactive="false"/>
-				
-            </wheelConfiguration>			
-			
-			
-			
-			
-			
-			<!-- LOWERED WHEELCONFIGS-->
-			<wheelConfiguration name="Daycab triple Axle"   brand="NOKIAN">
-                <wheels autoRotateBackSpeed="2.2" ackermannSteeringIndex="1" differentialIndex="1" foldingConfigurationIndex="2">
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontLeft" driveNode="wheelFrontLeft" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontRight" driveNode="wheelFrontRight" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>				
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                </wheels>
-				<objectChange node="daycabConfig" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="cardanDCLong" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="racks" translationActive="0 -0.387 1.133" translationInactive="0 -0.387 -0.099"/>
-				<objectChange node="chassi" translationActive="0 0 2.038"/>			
-				<!--LOWERED WHEELS-->
-				<objectChange node="allWheels" translationInactive="0 -2.286 1.131" translationActive="0 -2.105 1.131"/>
-				<objectChange node="coveredGuards" translationInactive="0 -0.302 0.906" translationActive="0 -0.157 0.906"/>		
-				<objectChange node="halfGuards" translationInactive="0 -2.145 -1.949" translationActive="0 -2.015 -1.949"/>		
-				<objectChange node="2ndAxle"  translationInactive="0 0.112 3.052" translationActive="0 0.297 3.052"/>		
-				<objectChange node="rearAxles"  translationInactive="0 -0.299 -0.901" translationActive="0 -0.092 -0.901"/>		
-				
-            </wheelConfiguration>
-            <wheelConfiguration name="Sleeper Triple Axle"   brand="NOKIAN">
-                <wheels autoRotateBackSpeed="2.2" ackermannSteeringIndex="2" differentialIndex="2" foldingConfigurationIndex="2">
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontLeft" driveNode="wheelFrontLeft" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontRight" driveNode="wheelFrontRight" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontLeftRear" driveNode="wheelFrontLeftRear" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontRightRear" driveNode="wheelFrontRightRear" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>					
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                </wheels>	
-				<objectChange node="sleeperConfig" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="cardanSleeperLong" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="chassi" translationActive="0 0 0.527"/>						
-				<!--LOWERED WHEELS-->
-				<objectChange node="allWheels" translationInactive="0 -2.286 1.131" translationActive="0 -2.105 1.131"/>
-				<objectChange node="coveredGuards" translationInactive="0 -0.302 0.906" translationActive="0 -0.157 0.906"/>		
-				<objectChange node="halfGuards" translationInactive="0 -2.145 -1.949" translationActive="0 -2.015 -1.949"/>		
-				<objectChange node="2ndAxle"  translationInactive="0 0.112 3.052" translationActive="0 0.297 3.052"/>		
-				<objectChange node="rearAxles"  translationInactive="0 -0.299 -0.901" translationActive="0 -0.092 -0.901"/>		
-
-			</wheelConfiguration>		
-            <wheelConfiguration name="Daycab Double Axle"   brand="NOKIAN">
-                <wheels autoRotateBackSpeed="2.2" ackermannSteeringIndex="3" differentialIndex="3" foldingConfigurationIndex="2">
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontLeft" driveNode="wheelFrontLeft" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontRight" driveNode="wheelFrontRight" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>				
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                </wheels>	
-				<objectChange node="wheel_rear_left1" visibilityActive="false" visibilityInactive="true"/>
-				<objectChange node="wheel_rear_right1" visibilityActive="false" visibilityInactive="true"/>						
-				<objectChange node="daycabConfig" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="cardanDCShort" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="firstRearAxle" visibilityActive="false" visibilityInactive="true"/>
-				<objectChange node="racks" translationActive="0 -0.387 1.133" translationInactive="0 -0.387 -0.099"/>
-				<objectChange node="chassi" translationActive="0 0 3.109"/>
-				<objectChange node="fenderFrontHalfG" translationActive="0 0 -1.381" translationInactive="0 0 0"/>
-				<objectChange node="fenderFrontCovered" visibilityActive="false" visibilityInactive="true"/>
-				<objectChange node="fenderFrontMudflap" translationActive="0 0 -1.377" translationInactive="0 0 0"/>
-				<objectChange node="platesFront" visibilityActive="false" visibilityInactive="true"/>
-				<!--LOWERED WHEELS-->
-				<objectChange node="allWheels" translationInactive="0 -2.286 1.131" translationActive="0 -2.105 1.131"/>
-				<objectChange node="coveredGuards" translationInactive="0 -0.302 0.906" translationActive="0 -0.157 0.906"/>		
-				<objectChange node="halfGuards" translationInactive="0 -2.145 -1.949" translationActive="0 -2.015 -1.949"/>		
-				<objectChange node="2ndAxle"  translationInactive="0 0.112 3.052" translationActive="0 0.297 3.052"/>		
-				<objectChange node="rearAxles"  translationInactive="0 -0.299 -0.901" translationActive="0 -0.092 -0.901"/>		
-							
-            </wheelConfiguration>				
-            <wheelConfiguration name="Sleeper Double Axle"   brand="NOKIAN">
-                <wheels autoRotateBackSpeed="2.2" ackermannSteeringIndex="4" differentialIndex="4" foldingConfigurationIndex="2">
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontLeft" driveNode="wheelFrontLeft" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontRight" driveNode="wheelFrontRight" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontLeftRear" driveNode="wheelFrontLeftRear" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontRightRear" driveNode="wheelFrontRightRear" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>					
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                </wheels>	
-				<objectChange node="wheel_rear_left1" visibilityActive="false" visibilityInactive="true"/>
-				<objectChange node="wheel_rear_right1" visibilityActive="false" visibilityInactive="true"/>				
-				<objectChange node="sleeperConfig" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="cardanSleeperShort" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="firstRearAxle" visibilityActive="false" visibilityInactive="true"/>
-				<objectChange node="chassi" translationActive="0 0 1.785"/>
-				<objectChange node="fenderFrontHalfG" translationActive="0 0 -1.381" translationInactive="0 0 0"/>
-				<objectChange node="fenderFrontCovered" visibilityActive="false" visibilityInactive="true"/>
-				<objectChange node="fenderFrontMudflap" translationActive="0 0 -1.377" translationInactive="0 0 0"/>
-				<objectChange node="platesFront" visibilityActive="false" visibilityInactive="true"/>
-				<!--LOWERED WHEELS-->
-				<objectChange node="allWheels" translationInactive="0 -2.286 1.131" translationActive="0 -2.105 1.131"/>
-				<objectChange node="coveredGuards" translationInactive="0 -0.302 0.906" translationActive="0 -0.157 0.906"/>		
-				<objectChange node="halfGuards" translationInactive="0 -2.145 -1.949" translationActive="0 -2.015 -1.949"/>		
-				<objectChange node="2ndAxle"  translationInactive="0 0.112 3.052" translationActive="0 0.297 3.052"/>		
-				<objectChange node="rearAxles"  translationInactive="0 -0.299 -0.901" translationActive="0 -0.092 -0.901"/>		
-										
-            </wheelConfiguration>	
-            <wheelConfiguration name="Daycab Hooklift"   brand="NOKIAN">
-                <wheels autoRotateBackSpeed="2.2" ackermannSteeringIndex="1" differentialIndex="1" foldingConfigurationIndex="2">
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontLeft" driveNode="wheelFrontLeft" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontRight" driveNode="wheelFrontRight" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
-                    </wheel>				
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
-						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
-                    </wheel>
-                </wheels>
-				<objectChange node="daycabConfig" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="cardanDChooklift" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="fueltanks1" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="fueltanks2" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="fueltanks3" visibilityActive="false" visibilityInactive="true"/>
-				<objectChange node="hookliftConfig" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="semiConfig" visibilityActive="false" visibilityInactive="true"/>				
-				<objectChange node="racks" translationActive="0 -0.387 1.133" translationInactive="0 -0.387 -0.099"/>
-				<objectChange node="chassi" translationActive="0 0 0.928"/>
-				<objectChange node="colHooklift" compoundChildActive="true" compoundChildInactive="false"/>
-				<!--LOWERED WHEELS-->
-				<objectChange node="allWheels" translationInactive="0 -2.286 1.131" translationActive="0 -2.105 1.131"/>
-				<objectChange node="coveredGuards" translationInactive="0 -0.302 0.906" translationActive="0 -0.157 0.906"/>		
-				<objectChange node="halfGuards" translationInactive="0 -2.145 -1.949" translationActive="0 -2.015 -1.949"/>		
-				<objectChange node="2ndAxle"  translationInactive="0 0.112 3.052" translationActive="0 0.297 3.052"/>		
-				<objectChange node="rearAxles"  translationInactive="0 -0.299 -0.901" translationActive="0 -0.092 -0.901"/>		
-											
 				
             </wheelConfiguration>		
 		
@@ -1122,43 +877,87 @@
 		        <fillUnitConfigurations>
             <fillUnitConfiguration name="Dumpbed" price="5000" >
                 <fillUnits>
+                    <fillUnit capacity="880" unit="$l10n_unit_literShort" fillTypes="diesel" showOnHud="false" showInShop="false">
+					</fillUnit>
+					<fillUnit unit="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="air" capacity="4500"/>
                     <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="bulk" capacity="25000">
-                        <exactFillRootNode node="0>8|8"/>
-                        <fillRootNode node="0>8|8|0|0|12>"/>
+                        <exactFillRootNode node="0>8|8|0|0|12"/>
+                        <fillRootNode node="0>"/>
                         <fillMassNode node="0>"/>
                         <autoAimTargetNode node="0>8|8|0|0|8"/>
-                        <fillAutoAimTargetNode startZ="2" endZ="4" invert="false" fillUnitIndex="3" startPercentage="5"/>
+                        <fillAutoAimTargetNode startZ="2" endZ="4" invert="false" fillUnitIndex="100" startPercentage="5"/>
                     </fillUnit>					
                 </fillUnits>
             </fillUnitConfiguration> 
         </fillUnitConfigurations>	
   </fillUnit>		
-    <fillVolume>
-        <fillVolumeConfigurations>
-            <fillVolumeConfiguration>
-                <volumes>
-                    <volume node="0>8|8|0|0|10|0" maxDelta="0.23" maxAllowedHeapAngle="18" fillUnitIndex="3" />
-                </volumes>
-            </fillVolumeConfiguration>
-        </fillVolumeConfigurations>
-		 </fillUnit>	
-        <unloadInfos>
-            <unloadInfo>
-                <node node="0>8|8|0|0|0" width="1.75" length="2.5" minHeight=".2" priority="2"/>
-                <node node="0>8|8|0|0|1" width="1.75" length="3.5" minHeight=".2" priority="2"/>
-                <node node="0>8|8|0|0|2" width="1.75" length="5.6"/>
-                <node node="0>8|8|0|0|3" width="1.75" length="1.0"/>
-            </unloadInfo>
-        </unloadInfos>
-		<heightNodes>
-            <heightNode>
-                <refNode node="0>8|8|0|0|10|1" />
-                <refNode node="0>8|8|0|0|10|2" />
-                <node node="0>8|8|0|0|9|0|0" baseScale="1 1 1" transAxis="0 1 0" />
-                <node node="0>8|8|0|0|9|0|1|0" baseScale="1 0.2 1" transAxis="0 0 0" scaleAxis="0 0.4 0" />
-            </heightNode>
-        </heightNodes>
-    </fillVolume>
+    <!-- <fillVolume> -->
+        <!-- <fillVolumeConfigurations> -->
+            <!-- <fillVolumeConfiguration> -->
+                <!-- <volumes> -->
+                    <!-- <volume node="0>8|8|0|0|10|0" maxDelta="0.23" maxAllowedHeapAngle="18" fillUnitIndex="100" /> -->
+                <!-- </volumes> -->
+            <!-- </fillVolumeConfiguration> -->
+        <!-- </fillVolumeConfigurations> -->
+		 <!-- </fillUnit>	 -->
+        <!-- <unloadInfos> -->
+            <!-- <unloadInfo> -->
+                <!-- <node node="0>8|8|0|0|0" width="1.75" length="2.5" minHeight=".2" priority="2"/> -->
+                <!-- <node node="0>8|8|0|0|1" width="1.75" length="3.5" minHeight=".2" priority="2"/> -->
+                <!-- <node node="0>8|8|0|0|2" width="1.75" length="5.6"/> -->
+                <!-- <node node="0>8|8|0|0|3" width="1.75" length="1.0"/> -->
+            <!-- </unloadInfo> -->
+        <!-- </unloadInfos> -->
+		<!-- <heightNodes> -->
+            <!-- <heightNode> -->
+                <!-- <refNode node="0>8|8|0|0|10|1" /> -->
+                <!-- <refNode node="0>8|8|0|0|10|2" /> -->
+                <!-- <node node="0>8|8|0|0|9|0|0" baseScale="1 1 1" transAxis="0 1 0" /> -->
+                <!-- <node node="0>8|8|0|0|9|0|1|0" baseScale="1 0.2 1" ="0 0 0" scaleAxis="0 0.4 0" /> -->
+            <!-- </heightNode> -->
+        <!-- </heightNodes> -->
+    <!-- </fillVolume> -->
+
+ <fillVolume>
+  <fillVolumeConfigurations> -->
+           <fillVolumeConfiguration> -->
+             <volumes> -->
+                    <volume node="0>8|8|0|0|10|0" maxDelta="0.2" maxAllowedHeapAngle="18" fillUnitIndex="100"/> 
+                 </volumes> -->
+            </fillVolumeConfiguration> -->
+       </fillVolumeConfigurations>		 -->
+            <unloadInfo fillVolumeIndex="100"> -->
+               <node node="0>8|8|0|0|0" width="1.3" length="2.5" minHeight="0.2" priority="2"/> -->
+               <node node="0>8|8|0|0|1" width="1.3" length="3.5" minHeight="0.2" priority="2"/> -->
+                 <node node="0>8|8|0|0|2" width="1.3" length="5.6"/> -->
+                 <node node="0>8|8|0|0|3" width="1.3" length="1.0"/> -->
+             </unloadInfo> -->
+         <heightNodes> -->
+             <heightNode fillVolumeIndex="100"> -->
+                 <refNode node="0>8|8|0|0|10|1"/> -->
+                 <refNode node="0>8|8|0|0|10|2"/> -->
+                 <node node="0>8|8|0|0|9|0|0" baseScale="1 0.2 1" transAxis="0 0 0" transMax="0 0.4 0"/> -->
+             </heightNode> -->
+             <heightNode fillVolumeIndex="100"> -->
+                 <refNode node="0>8|8|0|0|9|0|1|0"/> 
+             </heightNode> 
+        </heightNodes> 
+    </fillVolume>	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1239,7 +1038,7 @@
     </animations>
 	
 	    <dischargeable>
-        <dischargeNode node="0>10|4" emptySpeed="7140" fillUnitIndex="3" unloadInfoIndex="3" >
+        <dischargeNode node="0>8|8|4" emptySpeed="7140" fillUnitIndex="100" unloadInfoIndex="3" >
             <info width="1.75" length="1.5"/>
             <!-- <effects>
                 <effectNode effectNode="0>10|0|0|9|0|0|0" materialType="unloading" materialTypeId="3" fadeTime="1.5"/>
@@ -1248,12 +1047,12 @@
             <effects>
                 <effectNode effectClass="TipEffect">
                     <effectNode effectNode="0>8|8|0|0|9|0|1|0" effectClass="ParticleEffect" />
-                    <effectNode effectNode="0>8|8|0|0|9|0|0|0" materialType="unloading" materialTypeId="1" fadeTime="0.5" extraDistanceNode="0>10|4" extraDistance="0.2"/>
+                    <effectNode effectNode="0>8|8|0|0|9|0|0|0" materialType="unloading" materialTypeId="1" fadeTime="0.5" extraDistanceNode="0>8|8|4" extraDistance="0.2"/>
                 </effectNode>
                 <effectNode effectNode="0>8|8|0|0|9|0|0|1" materialType="smoke"     materialTypeId="1" fadeTime="0.5" />
             </effects>
         </dischargeNode>
-        <dischargeNode node="0>10|3" emptySpeed="1000" fillUnitIndex="3" unloadInfoIndex="1" >
+        <dischargeNode node="0>8|8|3" emptySpeed="1000" fillUnitIndex="100" unloadInfoIndex="1" >
             <info width="1.75" length="1.5"/>
             <!-- <effects>
                 <effectNode effectNode="0>10|0|0|9|0|0|0" materialType="unloading" materialTypeId="3" fadeTime="1.5"/>
@@ -1262,7 +1061,7 @@
             <effects>	
                 <effectNode effectClass="TipEffect">
                     <effectNode effectNode="0>8|8|0|0|9|0|1|0" effectClass="ParticleEffect" />
-                    <effectNode effectNode="0>8|8|0|0|9|0|0|0" materialType="unloading" materialTypeId="1" fadeTime="0.5" extraDistanceNode="0>10|3" extraDistance="0.2"/>
+                    <effectNode effectNode="0>8|8|0|0|9|0|0|0" materialType="unloading" materialTypeId="1" fadeTime="0.5" extraDistanceNode="0>8|8|3" extraDistance="0.2"/>
                 </effectNode>
                 <effectNode effectNode="0>8|8|0|0|9|0|0|1" materialType="smoke"     materialTypeId="1" fadeTime="0.5" />
             </effects>
@@ -1279,7 +1078,7 @@
 		 <cover>
         <coverConfigurations>
             <coverConfiguration>
-                <cover openAnimation="toggleCover" fillUnitIndices="3" />
+                <cover openAnimation="toggleCover" fillUnitIndices="100"/>
             </coverConfiguration>
         </coverConfigurations>
     </cover>
@@ -1406,9 +1205,6 @@
 		<!-- Dumpbed Config -->
 		<material name="dumpbed_color_mat" baseNode="dumpbed_color">
             <shaderParameter name="colorMat1" value="SHARED_GREY2"/>
-        </material>	
-		<material name="tarp_color_mat" baseNode="tarp_extended">
-            <shaderParameter name="colorMat3" value="SHARED_BLACK2"/>
         </material>	
     </baseMaterial>
 	
@@ -1767,6 +1563,5 @@
 		<i3dMapping id="dumpBed" node="0>8"/>
 		<i3dMapping id="dumpbedStatic" node="0>8|8|0|0|5"/>
 		<i3dMapping id="dumpbed_color" node="0>8|8|0|0|0"/>	
-		<i3dMapping id="tarp_extended" node="0>8|8|0|0|6|0"/>		
     </i3dMappings>
 </vehicle>
