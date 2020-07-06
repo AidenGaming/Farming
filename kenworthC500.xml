@@ -43,42 +43,50 @@
 			<configuration name="attacherJoint" index="1"/>
 			<configuration name="folding" index="1"/>
 			<configuration name="motor" index="1"/>
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>	
 		<configurationSet name="Sleeper Triple Axle">
             <configuration name="wheel" index="2"/>
 			<configuration name="attacherJoint" index="1"/>
 			<configuration name="folding" index="1"/>
 			<configuration name="motor" index="2"/>
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>		
 		<configurationSet name="Day Cab Double Axle">
             <configuration name="wheel" index="3"/>
 			<configuration name="attacherJoint" index="1"/>
 			<configuration name="folding" index="1"/>
 			<configuration name="motor" index="3"/>
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>		
 		<configurationSet name="Sleeper Double Axle">
             <configuration name="wheel" index="4"/>
 			<configuration name="attacherJoint" index="1"/>
 			<configuration name="folding" index="1"/>
 			<configuration name="motor" index="4"/>
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>				
         <configurationSet name="Day Cab Hooklift">
             <configuration name="wheel" index="5"/>
 			<configuration name="attacherJoint" index="2"/>
 			<configuration name="folding" index="2"/>
-			<configuration name="motor" index="5"/>			
+			<configuration name="motor" index="5"/>	
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>
 		<configurationSet name="Sleeper Hooklift">
             <configuration name="wheel" index="6"/>
 			<configuration name="attacherJoint" index="2"/>
 			<configuration name="folding" index="2"/>
-			<configuration name="motor" index="6"/>			
+			<configuration name="motor" index="6"/>	
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>
 		<configurationSet name="Sleeper Hooklift">
             <configuration name="wheel" index="6"/>
 			<configuration name="attacherJoint" index="2"/>
 			<configuration name="folding" index="2"/>
-			<configuration name="motor" index="6"/>			
+			<configuration name="motor" index="6"/>	
+			<configuration name="fillUnit" index="100"/>
+			
         </configurationSet>
 	
 		
@@ -91,43 +99,50 @@
 			<configuration name="attacherJoint" index="1"/>
 			<configuration name="folding" index="1"/>
 			<configuration name="motor" index="7"/>
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>	
 		<configurationSet name="Sleeper Triple Axle (lowered)">
             <configuration name="wheel" index="8"/>
 			<configuration name="attacherJoint" index="1"/>
 			<configuration name="folding" index="1"/>
 			<configuration name="motor" index="8"/>
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>		
 		<configurationSet name="Day Cab Double Axle (lowered)">
             <configuration name="wheel" index="9"/>
 			<configuration name="attacherJoint" index="1"/>
 			<configuration name="folding" index="1"/>
 			<configuration name="motor" index="9"/>
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>		
 		<configurationSet name="Sleeper Double Axle (lowered)">
             <configuration name="wheel" index="10"/>
 			<configuration name="attacherJoint" index="1"/>
 			<configuration name="folding" index="1"/>
 			<configuration name="motor" index="10"/>
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>				
         <configurationSet name="Day Cab Hooklift (lowered)">
             <configuration name="wheel" index="11"/>
 			<configuration name="attacherJoint" index="2"/>
 			<configuration name="folding" index="2"/>
-			<configuration name="motor" index="11"/>			
+			<configuration name="motor" index="11"/>	
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>
 		<configurationSet name="Sleeper Hooklift (lowered)">
             <configuration name="wheel" index="12"/>
 			<configuration name="attacherJoint" index="2"/>
 			<configuration name="folding" index="2"/>
-			<configuration name="motor" index="12"/>			
-        </configurationSet>
-			<configurationSet name="Day Cab dumptruck">
-            <configuration name="wheel" index="1"/>
+			<configuration name="motor" index="12"/>
 			<configuration name="fillUnit" index="100"/>
-			<configuration name="folding" index="1"/>
+        </configurationSet>
+		
+					<!-- Dumpbed vehicle config -->
+		<configurationSet name="Day Cab dumptruck">
+            <configuration name="wheel" index="5"/>
+			<configuration name="fillUnit" index="100"/>
 			<configuration name="motor" index="1"/>
-			<configuration name="attacherJoint" index="0"/>
+			<configuration name="fillUnit" index="100"/>
         </configurationSet>	
 		
 		
@@ -235,6 +250,7 @@
 				<objectChange node="daycabConfig" visibilityActive="true" visibilityInactive="false"/>
 				<objectChange node="cardanDCLong" visibilityActive="true" visibilityInactive="false"/>
 				<objectChange node="racks" translationActive="0 -0.387 1.133" translationInactive="0 -0.387 -0.099"/>
+				<objectChange node="dump_bed" visibilityActive="false" visibilityInactive="true"/>
 				<objectChange node="chassi" translationActive="0 0 2.038"/>			
 				
             </wheelConfiguration>
@@ -279,7 +295,8 @@
                 </wheels>	
 				<objectChange node="sleeperConfig" visibilityActive="true" visibilityInactive="false"/>
 				<objectChange node="cardanSleeperLong" visibilityActive="true" visibilityInactive="false"/>
-				<objectChange node="chassi" translationActive="0 0 0.527"/>						
+				<objectChange node="chassi" translationActive="0 0 0.527"/>
+				<objectChange node="dump_bed" visibilityActive="false" visibilityInactive="true"/>
             </wheelConfiguration>		
             <wheelConfiguration name="Daycab Double Axle"  brand="NOKIAN">
                 <wheels autoRotateBackSpeed="2.2" ackermannSteeringIndex="3" differentialIndex="3" foldingConfigurationIndex="1">
@@ -317,7 +334,7 @@
 				<objectChange node="fenderFrontCovered" visibilityActive="false" visibilityInactive="true"/>
 				<objectChange node="fenderFrontMudflap" translationActive="0 0 -1.377" translationInactive="0 0 0"/>
 				<objectChange node="platesFront" visibilityActive="false" visibilityInactive="true"/>
-							
+				<objectChange node="dump_bed" visibilityActive="false" visibilityInactive="true"/>			
             </wheelConfiguration>				
             <wheelConfiguration name="Sleeper Double Axle"  brand="NOKIAN">
                 <wheels autoRotateBackSpeed="2.2" ackermannSteeringIndex="4" differentialIndex="4" foldingConfigurationIndex="1">
@@ -360,6 +377,7 @@
 				<objectChange node="fenderFrontCovered" visibilityActive="false" visibilityInactive="true"/>
 				<objectChange node="fenderFrontMudflap" translationActive="0 0 -1.377" translationInactive="0 0 0"/>
 				<objectChange node="platesFront" visibilityActive="false" visibilityInactive="true"/>
+				<objectChange node="dump_bed" visibilityActive="false" visibilityInactive="true"/>
 										
             </wheelConfiguration>	
             <wheelConfiguration name="Daycab Hooklift"  brand="NOKIAN">
@@ -405,7 +423,9 @@
 				<objectChange node="racks" translationActive="0 -0.387 1.133" translationInactive="0 -0.387 -0.099"/>
 				<objectChange node="chassi" translationActive="0 0 0.928"/>
 				<objectChange node="colHooklift" compoundChildActive="true" compoundChildInactive="false"/>
-				<objectChange node="dump_bed" visibilityActive="true" visibilityInactive="false"/>
+				<objectChange node="dump_bed" visibilityActive="false" visibilityInactive="true"/>
+				<!-- <objectChange node="dump_bed" visibilityActive="true" visibilityInactive="false"/> -->
+				<!-- <objectChange node="dump_bed" translationActive="0 -387 1.133" translationInactive="0 0. 0."/> -->
 											
 				
             </wheelConfiguration>		
@@ -456,6 +476,7 @@
 				<objectChange node="sleeperConfig" visibilityActive="true" visibilityInactive="false"/>
 				<objectChange node="chassi" translationActive="0 0 -0.266"/>
 				<objectChange node="colHooklift" compoundChildActive="true" compoundChildInactive="false"/>
+				<objectChange node="dump_bed" visibilityActive="false" visibilityInactive="true"/>
 				
             </wheelConfiguration>		
 		
@@ -504,6 +525,7 @@
 				<objectChange node="semiConfig" visibilityActive="false" visibilityInactive="true"/>
 				<objectChange node="sleeperConfig" visibilityActive="true" visibilityInactive="false"/>
 				<objectChange node="chassi" translationActive="0 0 -0.266"/>
+				<objectChange node="dump_bed" visibilityActive="false" visibilityInactive="true"/>
 				<objectChange node="colHooklift" compoundChildActive="true" compoundChildInactive="false"/>
 				<!--LOWERED WHEELS-->
 				<objectChange node="allWheels" translationInactive="0 -2.286 1.131" translationActive="0 -2.105 1.131"/>
@@ -517,44 +539,50 @@
 			
 			<!-- Dumpbed/Truck wheel config -->
 			
-              <!-- <wheelConfiguration name="Day Cab dumptruck"  brand="NOKIAN"> -->
-                <!-- <wheels autoRotateBackSpeed="2.2" ackermannSteeringIndex="1" differentialIndex="1" foldingConfigurationIndex="3"> -->
-                    <!-- <wheel filename="wheels/wheels.xml" configId="single" isLeft="true" hasTireTracks="true" hasParticles="true"> -->
-                        <!-- <physics rotSpeed="1" restLoad="1.9" repr="axisFrontLeft" driveNode="wheelFrontLeft" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/> -->
-                    <!-- </wheel> -->
-                    <!-- <wheel filename="wheels/wheels.xml" configId="single" isLeft="false" hasTireTracks="true" hasParticles="true"> -->
-                        <!-- <physics rotSpeed="1" restLoad="1.9" repr="axisFrontRight" driveNode="wheelFrontRight" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/> -->
-                    <!-- </wheel>				 -->
-                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true"> -->
-                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
-						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
-                    <!-- </wheel> -->
-                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true"> -->
-                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
-						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
-                    <!-- </wheel> -->
-                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true"> -->
-                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
-						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
-                    <!-- </wheel> -->
-                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true"> -->
-                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
-						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
-                    <!-- </wheel> -->
-                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true"> -->
-                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
-						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
-                    <!-- </wheel> -->
-                    <!-- <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true"> -->
-                        <!-- <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/> -->
-						<!-- <additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" /> -->
-                    <!-- </wheel> -->
-                <!-- </wheels>		 -->
-				<!-- <objectChange node="chassi" translationActive="0 0 -0.266"/> -->
-				<!-- <objectChange node="dump_bed" visibilityActive="true" visibilityInactive="false"/> -->
-											
+              <wheelConfiguration name="Day Cab dumptruck"  brand="NOKIAN">
+                <wheels autoRotateBackSpeed="2.2" ackermannSteeringIndex="1" differentialIndex="1" foldingConfigurationIndex="0">
+                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontLeft" driveNode="wheelFrontLeft" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels.xml" configId="single" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="axisFrontRight" driveNode="wheelFrontRight" forcePointRatio="0.5" initialCompression="25" suspTravel="0.4" spring="28" damper="40" frictionScale="2"/>
+                    </wheel>				
+                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
+						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
+                    </wheel>
+                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right1" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
+						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
+                    </wheel>
+                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
+						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
+                    </wheel>
+                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right2" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
+						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
+                    </wheel>
+                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_left3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
+						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
+                    </wheel>
+                    <wheel filename="wheels/wheels.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="wheel_rear_right3" forcePointRatio="0.5" initialCompression="10" suspTravel="0.6" spring="70" damper="40" frictionScale="2"/>
+						<additionalWheel filename="wheels/wheels.xml" configId="addtire" offset="-0.15" hasParticles="true" hasTireTracks="true" />
+                    </wheel>
+                </wheels>		
+				<objectChange node="dump_bed" visibilityActive="true" visibilityInactive="false"/>
+             	<objectChange node="daycabConfig" visibilityActive="true" visibilityInactive="false"/>
+				<objectChange node="cardanDChooklift" visibilityActive="true" visibilityInactive="false"/>
+				<objectChange node="fueltanks1" visibilityActive="true" visibilityInactive="false"/>
+				<objectChange node="fueltanks2" visibilityActive="true" visibilityInactive="false"/>
+				<objectChange node="fueltanks3" visibilityActive="false" visibilityInactive="true"/>
+				<objectChange node="hookliftConfig" visibilityActive="false" visibilityInactive="true"/>		
+				<objectChange node="chassi" translationActive="0 0 -0.266"/>
+				<objectChange node="colHooklift" compoundChildActive="false" compoundChildInactive="true"/>							
 				
-            <!-- </wheelConfiguration>		 -->
+            </wheelConfiguration>		
 
 			
 			
@@ -574,6 +602,28 @@
         </ackermannSteeringConfigurations>
     </wheels>
 
+
+         <!-- Bed configuration Tab -->
+		<!-- <dumpbedConfigurations> -->
+		<!-- <dumpbedConfigurations name="Dumpbed" price="1000"> -->
+			<!-- <objectChange node="dump_bed" visibilityActive="true" visibilityInactive="false"/> -->
+             <!-- <objectChange node="hookliftConfig" visibilityActive="false" visibilityInactive="true"/> -->
+             <!-- <objectChange node="semiConfig" visibilityActive="false" visibilityInactive="true"/>			 -->
+		<!-- </dumpbedConfigurations> -->
+		<!-- <dumpbedConfigurations name="With Out Dumpbed" price="0"> -->
+		<!-- </dumpbedConfigurations> -->
+	<!-- </dumpbedConfigurations> -->
+
+
+	<!-- <vehicleTypeConfigurations title="Dump Bed"> -->
+        <!-- <vehicleTypeConfiguration name="Dump Bed1" price="1500" vehicleType="hookLiftTruckKW"> -->
+		<!-- <objectChange node="dump_bed" visibilityActive="true" visibilityInactive="false"/> -->
+        <!-- </vehicleTypeConfiguration> -->
+	<!-- </vehicleTypeConfigurations>	 -->
+	
+	
+
+	
 	
    <lights>
         <states>
@@ -938,17 +988,12 @@
 				
 			</fillUnitConfiguration>
 	        </fillUnitConfigurations>
-    </fillUnit>	
-	 <fillUnit>
 
 
-	<!-- Dumpbed -->
-	   <fillUnitConfigurations title="DumpBed">
-            <fillUnitConfiguration name="dump_bed" price="5000" >
-                <fillUnits>
-                    <fillUnit capacity="880" unit="$l10n_unit_literShort" fillTypes="diesel" showOnHud="false" showInShop="false">
-					</fillUnit>
-					<fillUnit unit="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="air" capacity="4500"/>
+
+	<!-- Dumpbed Fill Unit not sure if this can be its own category or not-->
+	   <fillUnitConfigurations title="dump_bed">
+            <fillUnitConfiguration name="dump_bed" >
                     <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="bulk" capacity="25000">
                         <exactFillRootNode node="0>8|8|0|0|12"/>
                         <fillRootNode node="0>"/>
@@ -956,16 +1001,7 @@
                         <autoAimTargetNode node="0>8|8|0|0|8"/>
                         <fillAutoAimTargetNode startZ="2" endZ="4" invert="false" fillUnitIndex="100" startPercentage="5"/>
                     </fillUnit>					
-                </fillUnits>
             </fillUnitConfiguration> 
-			 <fillUnitConfiguration name="No dump" price="0">
-                <fillUnits>                    
-					<fillUnit capacity="880" unit="$l10n_unit_literShort" fillTypes="diesel" showOnHud="false" showInShop="false">
-					</fillUnit>
-					<fillUnit unit="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="air" capacity="4500"/>
-						
-                </fillUnits>
-            </fillUnitConfiguration>
         </fillUnitConfigurations>	
   </fillUnit>		
     <!-- <fillVolume> -->
@@ -1106,10 +1142,7 @@
         <animation name="tipAnimationBack2">
             <part node="0>8|8|0|0" startTime="0" endTime="8" startRot="0 0 0" endRot="-20 0 0"/>
             <part node="0>8|8|0|0|1" startTime="0" endTime="8" startRot="0 0 0" endRot="20 0 0"/>
-        </animation>
-        <animation name="toggleCover">
-            <part node="0>8|8|0|0|6|1" startTime="0.0" endTime="3.5" startRot="-103 0 0" endRot="-4.7 0 0" />	
-        </animation>
+        </animation>	+
 		<!--Dump anims-->
 		
     </animations>
@@ -1148,17 +1181,6 @@
 	
 	
 	
-	
-	
-	
-	
-		 <cover>
-        <coverConfigurations>
-            <coverConfiguration>
-                <cover openAnimation="toggleCover" fillUnitIndices="100"/>
-            </coverConfiguration>
-        </coverConfigurations>
-    </cover>
 	
     <hookLiftTrailer>
         <jointLimits refAnimation="unfoldHand">
@@ -1281,7 +1303,7 @@
         </material>		
 		<!-- Dumpbed Config -->
 		<material name="dumpbed_color_mat" baseNode="dumpbed_color">
-            <shaderParameter name="colorMat1" value="SHARED_GREY2"/>
+            <shaderParameter name="colorMat1" value="SHARED_BLACK2"/>
         </material>	
     </baseMaterial>
 	
@@ -1365,7 +1387,7 @@
 
         <material name="designMat" shaderParameter="colorMat0"/>
 		<!-- Dump Bed Colour -->
-		<material name="dumpbed_color_mat" shaderParameter="colorMat1" />
+		<material name="dumpbed_color_mat" shaderParameter="SHARED_BLACK2" />
 
     </designMaterialConfigurations>
 	
